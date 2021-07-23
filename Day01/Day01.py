@@ -11,5 +11,3 @@ for i, v1 in enumerate(list):
         for v3 in list[i+j+1:]:
             if v1 + v2 + v3 == 2020:
                 print(v1 * v2 * v3)
-    
-    
