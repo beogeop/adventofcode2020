@@ -1,19 +1,15 @@
-file = open("Day1.txt", "r")
+file = open("input.txt", "r")
 list = []
-iter = []
 
 for i in file:
     list.append(int(i))
 
-x = range(1, len(list)-1)
-for j in x:
-    iter.append(int(j))
+for i, v1 in enumerate(list):
+    for j, v2 in enumerate(list[i+1:]):
+        if v1 + v2 == 2020:
+            print(v1 * v2)
+        for v3 in list[i+j+1:]:
+            if v1 + v2 + v3 == 2020:
+                print(v1 * v2 * v3)
     
-y = 0
-
-for num in list:
-    if list[0] + list[iter[y]] != 2020:
-        y + 1
-    elif list[0] + list[iter[y]] == 2020:
-        print(list[0] * list[iter[y]])
-
+    
