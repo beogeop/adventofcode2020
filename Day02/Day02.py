@@ -2,7 +2,6 @@ file = open("input.txt", "r")
 list = []
 list1 = []
 list2 = []
-list3 = []
 
 for i in file:
     list.append(i)
@@ -15,6 +14,6 @@ for j in list1:
 
 for i in list1:
     x = i[1].replace(":", "")
-    list3.append(x)
+    list2 = x
 
-print(list3)
+print(list2)
