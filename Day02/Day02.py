@@ -8,8 +8,6 @@ for i in file:
 
 for i in list:
     list1.append(i.split())
-    
-    
+    for j in list1:
+        list2.append(j[0].split("-")
 
-    
-        
