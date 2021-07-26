@@ -9,5 +9,6 @@ for i in file:
 for i in list:
     list1.append(i.split())
     for j in list1:
-        list2.append(j[0].split("-")
+        list2.append(int(j[0]).split("-"))
 
+print(list2)
