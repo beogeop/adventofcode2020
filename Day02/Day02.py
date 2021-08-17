@@ -1,19 +1,18 @@
 file = open("input.txt", "r")
 list = []
-list1 = []
-list2 = []
 
-for i in file:
-    list.append(i)
+for line in file:
+    index = 0
+    index1 = 0
+    for i in range(0, len(line)):
+        curr = line[i]
+        if curr == ":":
+            index = i
+        elif curr == "-":
+            index1 = i
 
-for i in list:
-    list1.append(i.split())
-    
-for j in list1:
-    list2.append(j[0].split("-"))
+    target = line[index-1]
+    low = line[0:index1]
+    high = line[index1+1:index1+3]
 
-for i in list1:
-    x = i[1].replace(":", "")
-    list2 = x
-
-print(list2)
+    if 
